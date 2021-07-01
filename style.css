@@ -1,0 +1,312 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("images/background.jpg");
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    font-size: 35px;
+}
+
+.progress-bar {
+    height: 3vh;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.progress-segment {
+    flex: 0 0 10%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border: solid;
+    border-radius: 5px;
+    background: white;
+}
+
+.page {
+    width: 65%;
+    height: 75%;
+    text-align: center;
+    margin-left: -3vw;
+    margin-top: 2vh;
+    padding-left: 20%;
+    padding-right: 20%;
+    transform: translateY(-15%);
+    display: none;
+}
+
+.page #content1 {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    /* height: 55vh; */]
+    text-align: center;
+    transform: translateY(15%);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.page #content2 {
+    background-color: #FFD55A;
+    color: #293250;
+    margin-top: 10%;
+    /* height: 55vh; */
+    padding: 5vh 5vw;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 15px;
+    line-height: 1.6;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.page #content2 p {
+    font-size: 1.75vw;
+}
+
+.page #content31 {
+    background-color: #293250;
+    margin-top: 10%;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 15px;
+    line-height: 1.6;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    position: relative;
+}
+
+.page #content32 {
+    background-color: #293250;
+    margin-top: 10%;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 15px;
+    line-height: 1.6;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    position: relative;
+}
+
+.page #content33 {
+    background-color: #293250;
+    margin-top: 10%;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 15px;
+    line-height: 1.6;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    position: relative;
+}
+
+.page #content34 {
+    background-color: #1CC5DC;
+    margin-top: 10%;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 15px;
+    line-height: 1.6;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    position: relative;
+    padding: 5vh 5vw;
+}
+
+.page #content4 {
+    background-color: #6DD47E;
+    color: #293250;
+    margin-top: 10%;
+    /* height: 55vh; */
+    padding: 5vh 5vw;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 15px;
+    line-height: 1.6;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 15px;
+}
+
+.controls img {
+    width: auto;
+    height: 10vh;
+}
+
+.controls #left {
+    position: absolute;
+    left: 5%;
+    top: 45%;
+    cursor: pointer;
+}
+
+.controls #right {
+    position: absolute;
+    right: 5%;
+    top: 45%;
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.video-overlay {
+    position: absolute;
+    top:0%;
+    width: 100%;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+
+#overlay2 {
+    display: none;
+    background-color: #5F79C4;
+}
+
+#overlay3 {
+    display: none;
+    background-color: #2D4587;
+}
+
+.question-text {
+    font-size: 2.75vw;
+    font-weight: bold;
+}
+
+.submit {
+    margin-top: 2vw;
+    font-size: 2vw;
+}
+
+#question2 {
+    margin: auto;
+    padding: 1vw;
+}
+
+#question3 {
+    margin: auto;
+    padding: 1vw;
+    padding-top: 4vw;
+}
+
+
+.options {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 2vw;
+    text-align: left;
+    margin-left: 15%;
+    margin-right: 15%;
+    line-height: 2vw;
+}
+
+/* Hide the browser's default radio button */
+.options input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    height: 25px;
+    top:15%;
+    left: -5%;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.options:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.options input:checked ~ .options {
+    color: red;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.options input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.options .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: blue;
+}
+
+.on-pause {
+    /*background: #161616;*/
+    position: absolute;
+    /*opacity: 0;*/
+    top:0%;
+    width: 100%;
+    height: 100%;
+}
+
+.on-pause span {
+    font-weight: bolder;
+    font-size: 20vw;
+    padding-top: 12%;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.on-pause span:hover {
+    color: #FC5404;
+}
+
+#pause21 {
+    background-color: #B7C5ED;
+}
+
+#pause22 {
+    background-color: #5F79C4;
+}
+
+#pause23 {
+    background-color: #2D4587;
+}
+
+#left img:hover {
+    content: url(images/lefthvr.png);
+}
+
+#right img:hover {
+    content: url(images/righthvr.png);
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
